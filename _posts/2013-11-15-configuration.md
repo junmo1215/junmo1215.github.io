@@ -8,7 +8,7 @@ fullview: true
 
 In your config file change these settings
 
-{% highlight yaml %}
+``` yaml
 title: dbyll
 author:  
   name: yourname  
@@ -20,4 +20,28 @@ author:
   resume: asd123  
   bio: Your stylish,  minimalist theme!  
   email_md5: md5ofemail  
-{% endhighlight %}
+```
+
+``` c++
+int main(){
+  return 0;
+}
+```
+
+# head1
+
+## head2
+
+1. 1111
+2. 2222
+3. 3333
+
+## head2
+
+- qaweqe
+- assdqw
+- asda 
+
+> dasdadqweeasda
+
+asdasda

@@ -44,13 +44,18 @@
 				<span class="icon-bar"></span>
 			</button>
 			{% if site.author.github %}
-			<a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}">
+			<a type="button" class="navbar-toggle nav-link" href="{{ site.author.github }}">
 				<i class="fa fa-github"></i>
 			</a>
 			{% endif %}
 			{% if site.author.twitter %}
 			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/{{ site.author.twitter }}">
-				<i class="fa fa-twitter"></i>
+				<i class="fa fa-twitter" style="width:13px;"></i>
+			</a>
+			{% endif %}
+			{% if site.author.facebook %}
+			<a type="button" class="navbar-toggle nav-link" href="{{ site.author.facebook }}">
+				<i class="fa fa-facebook"></i>
 			</a>
 			{% endif %}
 			{% if site.author.email %}
