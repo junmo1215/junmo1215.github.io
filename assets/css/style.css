@@ -2,6 +2,8 @@
 
 body{
 	color: #2c3e50;
+	line-height: 2;
+	font-weight: 300;
 }
 
 .sidebar {
@@ -312,4 +314,13 @@ h5.navigation a{
 
 h5.navigation a:hover{
 	color: #fff;
+}
+
+blockquote p{
+	font-size: 14px;
+	line-height: 2;
+}
+
+pre{
+	background-color: #272822;
 }
