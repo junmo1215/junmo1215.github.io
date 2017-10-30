@@ -9,9 +9,9 @@ description:
 ---
 
 [原文链接](https://pdos.csail.mit.edu/papers/linux:osdi10.pdf)
-目录：
 
-[TOC]
+* 目录 
+{:toc}
 
 # 摘要
 这篇paper探讨传统的kernel设计能否使应用程序scale

@@ -10,9 +10,8 @@ description:
 
 [原文链接](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ISCA15_Vasileios_Karakostas.pdf)
 
-目录：
-
-[TOC]
+* 目录 
+{:toc}
 
 # 摘要
 

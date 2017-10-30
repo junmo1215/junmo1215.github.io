@@ -10,9 +10,8 @@ description:
 
 [原文链接](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/asplos2011-drawbridge.pdf)
 
-目录：
-
-[TOC]
+* 目录 
+{:toc}
 
 # 简介
 本文用新的方式重新讨论了一个旧的操作系统架构——library OS。

@@ -8,7 +8,8 @@ categories: [machine-learning]
 description: 
 ---
 
-[TOC]
+* 目录
+{:toc}
 
 # 从图像识别说起
 

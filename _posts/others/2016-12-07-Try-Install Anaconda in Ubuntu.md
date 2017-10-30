@@ -8,6 +8,9 @@ tags: []
 description: 
 ---
 
+* 目录 
+{:toc}
+
 # 说明
 
 自从有一次改变了win10控制台里面的一个编码问题之后（好像是默认编码改成了uft-8），python再也不能好好的跑在我的win10上面了，控制台启动python、pip会出错，具体错误是"LookupError: unknown encoding: cp65001"，然后由于这些天我的系统里面docker什么的都崩了，所以干脆安装了一个ubuntu。之前几乎没有用过Ubuntu，安装软件过程中也是遇到了一些坑，所以把安装Anaconda中遇到的问题记录下来，方便下次查找。

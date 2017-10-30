@@ -8,7 +8,8 @@ categories: [machine-learning]
 description: 
 ---
 
-[TOC]
+* 目录
+{:toc}
 
 # 2584-fibonacci game
 

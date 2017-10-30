@@ -14,7 +14,8 @@ description:
 
 ![ubuntu_version](http://7xrop1.com1.z0.glb.clouddn.com/others/ubuntu_version.png)
 
-[TOC]
+* 目录 
+{:toc}
 
 # 修改环境变量
 
