@@ -292,7 +292,24 @@ a.rss:hover{
 	border:1px solid #cf5d0f
 }
 
-/* .li-social{
-	display:inline;
-	padding:0;
-} */
+a>img.img-qrcode{
+	height: 150px;
+	width: 150px;
+	display: none;
+}
+
+h5.navigation{
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+h5.navigation a{
+	text-decoration: none;
+	color: #6d7a8d;
+}
+
+h5.navigation a:hover{
+	color: #fff;
+}
