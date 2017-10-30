@@ -1,0 +1,48 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+disqus: 
+google_analytics: 
+title: junmo
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: junmo
+
+description: 
+author:
+  name: junmo
+  email: mailto:997128120@qq.com
+  github: https://github.com/junmo1215
+  facebook: http://facebook.com/junmo1215
+  wechat: z997128120 &#10;↑上面有二维码
+  zhihu: https://www.zhihu.com/people/junmo-lu/activities
+  twitter: 
+  pinterest: 
+  linkedin: 
+  bio: 研究生在读
+  email_md5: 1a6a594d5a561d9b30c7fcc16be8f249
+  google:
+  weibo:
+  rss: feed.xml
+
+
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
