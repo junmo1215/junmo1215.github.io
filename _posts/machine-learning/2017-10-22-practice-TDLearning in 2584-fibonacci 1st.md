@@ -22,7 +22,7 @@ description:
 - Temporal Difference Learning
 - N-Tuple Networks
 
-文章地址： <http://junmo.farbox.com/post/ji-qi-xue-xi/-shi-zuo-tdlearning-in-2584-fibonacci-da-jian-ji-chu-kuang-jia>
+文章地址： <{{ site.BASE_PATH }}/post/ji-qi-xue-xi/-shi-zuo-tdlearning-in-2584-fibonacci-da-jian-ji-chu-kuang-jia>
 
 代码地址： <https://github.com/junmo1215/rl_games/tree/master/2584_C%2B%2B>
 

@@ -17,7 +17,7 @@ description:
 
 主要是参考下面两个之前已经有了的实现，网络的架构完全没有更改，只是当做练习重新做了一遍
 
-文章地址： <http://junmo.farbox.com/post/ji-qi-xue-xi/-shi-zuo-li-yong-qiang-hua-xue-xi-wan-flappy-bird>
+文章地址： <{{ site.BASE_PATH }}/post/ji-qi-xue-xi/-shi-zuo-li-yong-qiang-hua-xue-xi-wan-flappy-bird>
 
 代码地址： <https://github.com/ljm1992/rl_games/tree/master/flappy_bird>
 
@@ -329,7 +329,7 @@ $$
 所以在learn这个函数里面的逻辑是：
 - 拿到当前状态s和当前动作a，喂给神经网络能获取这个情况下的Q(代码里面是pred_q_value)
 - 用下一个状态s'，喂给神经网络，由于动作没有确定，所以选择估值最高的一个动作得到act_q_value
-- 定义cost_function = (pred_q_value - act_q_value) ^ 2
+- 定义 $ \text{cost_function} = (\text{pred_q_value} - \text{act_q_value})^2 $
 - 用Adam算法训练神经网络使cost_function最小(这一步tensorflow已经封装好了直接用就行tf.train.AdamOptimizer(1e-6).minimize(self.cost))
 
 其他的事情就是喂数据给这个网络让网络不停的优化就可以了。

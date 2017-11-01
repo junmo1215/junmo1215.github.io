@@ -31,8 +31,6 @@ description:
 
 由于数据集使用的是[cifar10](https://www.cs.toronto.edu/~kriz/cifar.html)，所以需要对架构进行一些修改，主要是最后的全连接层的节点数量有变化。
 
-![VGG19_for_cifar10](http://7xrop1.com1.z0.glb.clouddn.com/others/machine-learning/model.png)
-
 主要的模型建立代码如下（使用keras，后端使用的是tensorflow）：
 
 > 前端后端只是一种形象的说法。由于tensorflow的代码实现起来有点复杂，而Keras提供简洁一致的API，能帮助用户快速实现神经网络。可以简单的看成keras是tensorflow（以及Theano等）的封装
