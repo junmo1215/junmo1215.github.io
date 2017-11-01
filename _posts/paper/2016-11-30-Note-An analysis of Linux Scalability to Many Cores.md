@@ -207,6 +207,7 @@ system time很少而user time很多，大部分时间都花在user mode 里面�
 
 
 # 参考
+
 1. [A Comprehensive Presentation on 'An Analysis of Linux Scalability  to Many Cores](https://zh.scribd.com/document/179812254/A-Comprehensive-Presentation-on-An-Analysis-of-Linux-Scalability-to-Many-Cores)
 2. [锁无关的(Lock-Free)数据结构——在避免死锁的同时确保线程继续](http://blog.csdn.net/pongba/article/details/588638)
 3. [False sharing](https://en.wikipedia.org/wiki/False_sharing)

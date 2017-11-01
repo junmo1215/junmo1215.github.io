@@ -48,7 +48,7 @@ sudo dpkg -i [名称].deb
 
 ![select_linux_image](http://7xrop1.com1.z0.glb.clouddn.com/others/select_linux_image.png)
 
-使用```sudo apt-get remove linux-image-{{版本号}}-generic```删除对应的文件（注意修改版本号）
+使用```sudo apt-get remove linux-image-{版本号}-generic```删除对应的文件（注意修改版本号）
 
 ![remove_old_image](http://7xrop1.com1.z0.glb.clouddn.com/others/remove_old_image.png)
 
