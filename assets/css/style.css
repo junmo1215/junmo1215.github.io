@@ -101,6 +101,7 @@ article{
 .article_body{
 	margin-top: 20px;
 	margin-bottom: 20px;
+	word-wrap: break-word;
 }
 
 .post-date {
@@ -323,4 +324,9 @@ blockquote p{
 
 pre{
 	background-color: #272822;
+}
+
+div.MathJax_Display{
+	overflow-x: auto;
+	overflow-y: hidden;
 }
