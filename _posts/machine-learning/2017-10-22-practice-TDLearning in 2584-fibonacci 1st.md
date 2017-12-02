@@ -18,11 +18,10 @@ description:
 这个代码是[吳毅成教授](http://java.csie.nctu.edu.tw/~icwu/chindex.html)开设的TCG（电脑对局理论，Theory of Computer Games）课程project，从0开始（助教这次提供了框架）一步步实现AI自己玩2584，最终的胜率（达到2584）差不多在95%以上。
 
 涉及的知识点目前有：
+- 2584的基本规则
 - C++基本语法
-- Temporal Difference Learning
-- N-Tuple Networks
 
-文章地址： <{{ site.BASE_PATH }}/post/ji-qi-xue-xi/-shi-zuo-tdlearning-in-2584-fibonacci-da-jian-ji-chu-kuang-jia>
+文章地址： <https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html>
 
 代码地址： <https://github.com/junmo1215/rl_games/tree/master/2584_C%2B%2B>
 

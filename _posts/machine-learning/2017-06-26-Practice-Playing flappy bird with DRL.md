@@ -17,9 +17,9 @@ description:
 
 主要是参考下面两个之前已经有了的实现，网络的架构完全没有更改，只是当做练习重新做了一遍
 
-文章地址： <{{ site.BASE_PATH }}/post/ji-qi-xue-xi/-shi-zuo-li-yong-qiang-hua-xue-xi-wan-flappy-bird>
+文章地址： <https://junmo1215.github.io/machine-learning/2017/06/26/Practice-Playing-flappy-bird-with-DRL.html>
 
-代码地址： <https://github.com/ljm1992/rl_games/tree/master/flappy_bird>
+代码地址： <https://github.com/junmo1215/rl_games/tree/master/flappy_bird>
 
 # 代码架构
 
