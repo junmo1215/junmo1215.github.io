@@ -19,7 +19,7 @@ description:
 - Temporal Difference Learning
 - N-Tuple Networks
 
-文章地址： <https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2st.html>
+文章地址： <https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html>
 
 代码地址： <https://github.com/junmo1215/rl_games/tree/master/2584_C%2B%2B>
 
@@ -142,7 +142,7 @@ slide up        reward: 2
 
 这个文件就是前面说到的数组，也可以理解成表格，就是根据盘面的feature查到当前这个feature的估值，只是在这个基础上增加了读写操作以及内存不够的时候会报错。这部分的代码是助教提供的，印象中没有做修改，里面的内容也不太多，稍微看看就好。
 
-> 不过当时写的时候有个地方卡了一晚上，这里面处于效率的考量禁止使用拷贝构造函数。
+> 不过当时写的时候有个地方卡了一晚上，这里面出于效率的考量禁止使用拷贝构造函数。
 ``` cpp
 weight(const weight& f) = delete;
 weight& operator =(const weight& f) = delete;
