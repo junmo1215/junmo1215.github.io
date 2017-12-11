@@ -12,7 +12,7 @@ description:
 
 使用的系统是ubuntu 16.04 LTS
 
-![ubuntu_version](http://7xrop1.com1.z0.glb.clouddn.com/others/ubuntu_version.png)
+![20170507_1]({{ site.url }}/images/20170507_1.png)
 
 * 目录 
 {:toc}
@@ -46,15 +46,15 @@ sudo dpkg -i [名称].deb
 
 首先使用```dpkg --get-selections|grep linux-image```找到内核文件
 
-![select_linux_image](http://7xrop1.com1.z0.glb.clouddn.com/others/select_linux_image.png)
+![20170507_2]({{ site.url }}/images/20170507_2.png)
 
 使用```sudo apt-get remove linux-image-{版本号}-generic```删除对应的文件（注意修改版本号）
 
-![remove_old_image](http://7xrop1.com1.z0.glb.clouddn.com/others/remove_old_image.png)
+![20170507_3]({{ site.url }}/images/20170507_3.png)
 
 删除之后再查看就会发现删除的这个被标记为了deinstall
 
-![after_remove](http://7xrop1.com1.z0.glb.clouddn.com/others/after_remove.png)
+![20170507_4]({{ site.url }}/images/20170507_4.png)
 
 > 实际操作的时候不需要每删除一个就使用```dpkg --get-selections|grep linux-image```查看一下，在删除之后会提示还有哪些旧的文件，按照删除过程中给的信息就行了，或者直接去/boot目录中看还有哪些剩余
 不过不确定版本号最大的那个能不能删除，没有做过测试
@@ -86,7 +86,7 @@ sudo dpkg -i [名称].deb
 ps -ef | grep python
 ```
 
-![Screenshot](http://7xrop1.com1.z0.glb.clouddn.com/others/Screenshot_2017-08-30_17-39-09.png)
+![20170507_5]({{ site.url }}/images/20170507_5.png)
 
 第二列为进程的pid，杀掉进程的指令是：```kill -s 9 [pid]```
 

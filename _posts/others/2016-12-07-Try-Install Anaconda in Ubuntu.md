@@ -50,11 +50,11 @@ conda create --name python2 python=2
 
 创建成功后可以通过`conda info --envs`指令看目前的conda环境信息。
 
-![conda_info](http://7xrop1.com1.z0.glb.clouddn.com/others/conda_info.png)
+![20161207_1]({{ site.url }}/images/20161207_1.png)
 
 然后就可以进入python2的环境执行python2.7的代码了：
 
-![python_version](http://7xrop1.com1.z0.glb.clouddn.com/others/python_version.png)
+![20161207_2]({{ site.url }}/images/20161207_2.png)
 
 > 在windows系统中执行 `activate [name]` 进入虚拟环境 `deactivate` 退出
 
@@ -62,7 +62,7 @@ conda create --name python2 python=2
 
 然后执行`ipython notebook`就能打开Jupyter，然而好像不管从python2还是python3环境进入，Jupyter中的python版本都是3.5的：
 
-![python_version_in_jupyter](http://7xrop1.com1.z0.glb.clouddn.com/others/python_version_in_jupyter.png)
+![20161207_3]({{ site.url }}/images/20161207_3.png)
 
 这个原因应该是刚刚创建的python2环境没有安装ipython notebook，因此需要在python2中先安装一个ipython
 
@@ -73,19 +73,19 @@ ipython kernel install --user
 
 但是我在python2环境中安装ipython的时候出现了问题
 
-![trouble_install_ipython](http://7xrop1.com1.z0.glb.clouddn.com/others/trouble_install_ipython.png)
+![20161207_4]({{ site.url }}/images/20161207_4.png)
 
 网上看到的说法是没有安装backports.shutil_get_terminal_size并且有人安装这个之后问题解决了，然而我安装的时候提示已经存在，卸载后重新安装结果也是一样，并且pip list中能看到这个是已经安装了的。
 
-![exists_shutil_get_terminal_size_in_python2](http://7xrop1.com1.z0.glb.clouddn.com/others/exists_shutil_get_terminal_size_in_python2.png)
+![20161207_5]({{ site.url }}/images/20161207_5.png)
 
 继续搜索发现有个方法(<http://abelxu.blog.51cto.com/9909959/1852263>)是找到报错的那个代码，修改引用的模块，改为shutil_backports，尝试了一下问题解决了
 
-![change_terminal_py](http://7xrop1.com1.z0.glb.clouddn.com/others/change_terminal_py.png)
+![20161207_6]({{ site.url }}/images/20161207_6.png)
 
 目前效果是从Python2环境中进入ipython notebook发现python版本为2.7，外部ipython中版本正常，实现了不同python版本的效果
 
-![ipython_with_python2_7](http://7xrop1.com1.z0.glb.clouddn.com/others/ipython_with_python2_7.png)
+![20161207_7]({{ site.url }}/images/20161207_7.png)
 
 
 # 参考

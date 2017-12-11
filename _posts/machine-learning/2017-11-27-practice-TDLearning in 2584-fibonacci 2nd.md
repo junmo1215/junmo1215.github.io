@@ -120,7 +120,7 @@ slide up        reward: 2
 
 前面的feature只是一个举例，根据这篇paper：[Multi-stage temporal difference learning for 2048-like games](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7518633)，类似这种游戏feature应该选择32个，具体可以参照下图：
 
-![n_tuple](http://7xrop1.com1.z0.glb.clouddn.com/others/machine-learning/n_tuple.jpg)
+![20171127_1]({{ site.url }}/images/20171127_1.png)
 
 在paper中提到的是把左上角那幅图的feature旋转对称，其实就是做出了很多不同的feature，这八幅图的索引都是由左上到右下是从0到15，取feature的方式跟之前一样。把这32个feature编号从0到31，每个盘面的估值就是32个feature的估值相加。
 
@@ -285,7 +285,7 @@ virtual void save_weights(const std::string& path) {
 
 # 最终效果
 
-![20171202172135](http://7xrop1.com1.z0.glb.clouddn.com/others/machine-learning/20171202172135.jpg)
+![20171127_2]({{ site.url }}/images/20171127_2.png)
 
 这好像是之前训练了两天的结果，不过不是用这台电脑训练的。从结果也能看出来，在17711前面的方块几乎能保证可以达到，但是17711后分数就一直上不去了，这是因为我们由于内存不够设置了MAX_INDEX = 21，对应的这个数值刚好就是17711，大于或者等于这个数值的方块我们的AI都没有区分，这大概也是这种方法的瓶颈。(其实感觉可以把weights这个变量存在数据库里面，不过每次跟数据库交互速度应该会比较慢，目前没有尝试这个，不过这类游戏研究的比较多的是2048，最大索引可以设置成16会方便很多)。
 

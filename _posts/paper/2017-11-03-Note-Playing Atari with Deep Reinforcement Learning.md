@@ -91,7 +91,7 @@ $Q_t^{\star} = Q_t$
 
 最终的算法如下：
 
-![DeepMind_Deep_Reinforcement_Learning](http://7xrop1.com1.z0.glb.clouddn.com/others/DeepMind_Deep_Reinforcement_Learning.jpg)
+![20171103_1]({{ site.url }}/images/20171103_1.png)
 
 # 算法详解
 
@@ -142,7 +142,7 @@ Atari游戏的原始画面是210 * 160像素的图案，每个像素可以选择
 
 > 每次卷积之后会加一个非线性层（激活函数），目前用的比较多的是ReLU，但是这个paper中没有提到使用的是什么函数，根据这部分的参考文献推测可能是tanh
 
-![神经网络架构图](http://7xrop1.com1.z0.glb.clouddn.com/paper/Playing_Atari_with_Deep_Reinforcement_Learning_4.png)
+![20171103_2]({{ site.url }}/images/20171103_2.png)
 
 ## 实验过程
 
@@ -163,13 +163,13 @@ Atari游戏的原始画面是210 * 160像素的图案，每个像素可以选择
 
 不同于监督学习，强化学习并没有一个很好的评量标准，原本DeepMind打算采用不同训练时间下平均得分作为衡量标准，但是发现平均得分的震荡幅度有点大（如下图中最左边的两个图），分析原因推测是小的权重变化会导致选择动作的策略不同，策略的改变导致游戏过程中遇到的状态的分布有很大的变化，所以导致得分不稳定。因此最后选择平均Q值作为评估标准，下图中右边两幅图中也可以看出Q值比较平滑的上升。这表明虽然缺乏理论的证明，但是这种做法确实能用强化学习的信号训练大型的神经网络并且收敛。
 
-![Playing_Atari_with_Deep_Reinforcement_Learning_1](http://7xrop1.com1.z0.glb.clouddn.com/paper/Playing_Atari_with_Deep_Reinforcement_Learning_1.png)
+![20171103_3]({{ site.url }}/images/20171103_3.png)
 
 ## Q值可视化
 
 下图中的实验简单描述了Q值直观上的意义。游戏截图中的第一幅图表明左侧有一个新的敌人出现，这时候网络给出的估值瞬间飙高；第二幅图表示玩家子弹快要打中敌人了，如果打中就会产生一个新的reward，这时候的估值再次升高；第三幅图是子弹打到敌人已经拿到reward后，网络给出的估值又回到了原先敌人没有出现的地方附近。
 
-![Playing_Atari_with_Deep_Reinforcement_Learning_2](http://7xrop1.com1.z0.glb.clouddn.com/paper/Playing_Atari_with_Deep_Reinforcement_Learning_2.png)
+![20171103_4]({{ site.url }}/images/20171103_4.png)
 
 ## 评估
 
@@ -177,7 +177,7 @@ Atari游戏的原始画面是210 * 160像素的图案，每个像素可以选择
 
 此外，他们还比较了人类玩家和不同算法的得分情况。除了上面介绍的算法之外还有随机的选择动作。对比结果在下面列表所示，其中HNeat Best代表人工标注屏幕上物体的位置和类别的结果，HNeat Pixel代表使用8个特别的颜色做出八个图层，然后标注每个图层代表的类别的结果。
 
-![Playing_Atari_with_Deep_Reinforcement_Learning_3](http://7xrop1.com1.z0.glb.clouddn.com/paper/Playing_Atari_with_Deep_Reinforcement_Learning_3.png)
+![20171103_5]({{ site.url }}/images/20171103_5.png)
 
 # 参考
 

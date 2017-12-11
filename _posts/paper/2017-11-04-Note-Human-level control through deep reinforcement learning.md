@@ -72,7 +72,7 @@ $\theta^-_i$
 
 更新后的算法如下：
 
-![Human-level_control_through_deep_reinforcement_learning_1](http://7xrop1.com1.z0.glb.clouddn.com/paper/Human-level_control_through_deep_reinforcement_learning_1.jpg)
+![20171104_1]({{ site.url }}/images/20171104_1.png)
 
 这部分只是在开始初始化了一个相同的神经网络
 $\hat{Q}$
@@ -90,7 +90,7 @@ $\hat{Q}$
 
 其他参数以及说明如下表所示：
 
-![Human-level_control_through_deep_reinforcement_learning_2](http://7xrop1.com1.z0.glb.clouddn.com/paper/Human-level_control_through_deep_reinforcement_learning_2.jpg)
+![20171104_2]({{ site.url }}/images/20171104_2.png)
 
 # 结果分析
 
@@ -98,7 +98,7 @@ $\hat{Q}$
 
 paper中使用一种叫做t-SNE的降维方法将学习到的东西展示在二维平面上，并对产生的结果进行分析。Space Invaders游戏结果如下图所示：
 
-![Human-level_control_through_deep_reinforcement_learning_3](http://7xrop1.com1.z0.glb.clouddn.com/paper/Human-level_control_through_deep_reinforcement_learning_3.jpg)
+![20171104_3]({{ site.url }}/images/20171104_3.png)
 
 具体做法是将这个游戏两个小时的游戏画面喂给神经网络，提取最后一个隐藏层的feature，然后使用t-SNE进行降维展示在平面上。图案中的颜色表示对这个状态的估值，估值由高到低是从深红色到深蓝色。从这个图形中可以看出一些信息：
 - 对于状态相近的游戏画面，神经网络给的估值也相似，压缩后点的位置也很相近
@@ -112,7 +112,7 @@ paper中使用一种叫做t-SNE的降维方法将学习到的东西展示在二�
 
 ## Q值的可视化以及实际意义分析
 
-![Human-level_control_through_deep_reinforcement_learning_4](http://7xrop1.com1.z0.glb.clouddn.com/paper/Human-level_control_through_deep_reinforcement_learning_4.jpg)
+![20171104_4]({{ site.url }}/images/20171104_4.png)
 
 这个图中分析了Q值直观上代表的意义
 

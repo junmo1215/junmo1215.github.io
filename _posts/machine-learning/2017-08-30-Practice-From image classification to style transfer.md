@@ -19,7 +19,7 @@ description:
 
 下面先用一个例子看CNN的架构，这个代码中使用了VGG19模型，这个架构是2014年ImageNet挑战赛分类问题的亚军
 
-![ConvNet_configurations](http://7xrop1.com1.z0.glb.clouddn.com/others/machine-learning/ConvNet_configurations.png)
+![20170830_1]({{ site.url }}/images/20170830_1.png)
 
 # 使用VGG19进行图像分类
 

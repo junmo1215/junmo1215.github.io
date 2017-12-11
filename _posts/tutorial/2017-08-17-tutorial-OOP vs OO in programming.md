@@ -130,11 +130,11 @@ if __name__ == '__main__':
 
 程序導向：
 
-![diff_in_pp](http://7xrop1.com1.z0.glb.clouddn.com/others/diff_in_pp.jpg)
+![20170817_1]({{ site.url }}/images/20170817_1.png)
 
 物件導向：
 
-![diff_in_oop](http://7xrop1.com1.z0.glb.clouddn.com/others/diff_in_oop.jpg)
+![20170817_2]({{ site.url }}/images/20170817_2.png)
 
 在這裡可能還看不出物件導向的優勢，是因為目前來說只用到了物件導向的一個特性就是**封裝(Encapsulation)**，並且沒有發揮到優勢的地方。現在做進一步的改進理解封裝的優勢。
 

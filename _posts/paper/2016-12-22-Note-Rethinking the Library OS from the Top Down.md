@@ -56,9 +56,9 @@ kernel指的是内核，处理多处理器同步，线程与中断的调度与�
 
 Drawbridge提供了另外一种方式，将应用程序到kernel之间的内容包装在一起，抽象为一个library OS，应用程序调用LibOS的接口，由LibOS调用system call。有一个不同的是Drawbridge将UNIX Server、Device Driver、File Server提到了User mode，kernel中只留了Basic IPC、VM和Scheduling的功能，引入libos后的系统架构为：
 
-![drawbridge_architecture](http://7xrop1.com1.z0.glb.clouddn.com/paper/drawbridge_architecture.png)
+![20161222_1]({{ site.url }}/images/20161222_1.png)
 
-![drawbridge_architecture2](http://7xrop1.com1.z0.glb.clouddn.com/paper/drawbridge_architecture2.png)
+![20161222_2]({{ site.url }}/images/20161222_2.png)
 
 上图中左边为windows7的系统架构，右边为drawbridge的架构，一部分内容提到user mode后需要考虑这部分内容的安全性，在LibOS与kernel之间有一个security monitor，用于保证LibOS传入指令的安全性。
 

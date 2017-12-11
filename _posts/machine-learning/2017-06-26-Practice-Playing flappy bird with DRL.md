@@ -36,7 +36,7 @@ flappy_bird
 
 剩下的两个文件是比较关键的部分，要理解这两个文件的内容，需要了解一下Deep Reinforcement Learning的算法细节：
 
-![DeepMind_Deep_Reinforcement_Learning](http://7xrop1.com1.z0.glb.clouddn.com/others/DeepMind_Deep_Reinforcement_Learning.jpg)
+![20170626_1]({{ site.url }}/images/20170626_1.png)
 
 # 算法说明
 
@@ -66,7 +66,7 @@ flappy_bird
 
 神经网络的架构图（按照之前的实作[yenchenlin/DeepLearningFlappyBird: Flappy Bird hack using Deep Reinforcement Learning (Deep Q-learning)](https://github.com/yenchenlin/DeepLearningFlappyBird)）：
 
-![network](http://7xrop1.com1.z0.glb.clouddn.com/others/network.png)
+![20170626_2]({{ site.url }}/images/20170626_2.png)
 
 网络架构是拿到游戏状态(每个样本维度是 80 * 80 * 4)，然后卷积(输出维度 20 * 20 * 32)、池化(输出 10 * 10 * 32)、卷积(输出 5 * 5 * 64)、卷积(输出 5 * 5 * 64)、reshape(1600)、全连接层(512)、输出层(2)
 
@@ -322,7 +322,7 @@ $$
 
 一个想法是用两个方法表示同一个值，如果说网络表现绝对理想，这两个值应该是一样的，在不理想的情况下，就能用两种方式计算的结果的误差大小衡量网络的好坏，尽可能通过训练数据让这个值缩小，我们就能得到一个性能相对较好的网络。重复很多次之后这个网络的表现就会越来越好。其实这个值已经在之前有提到过了：就是当前的估值$R_t$
 
-![R_t_function](http://7xrop1.com1.z0.glb.clouddn.com/others/R_t_function.jpg)
+![20170626_3]({{ site.url }}/images/20170626_3.png)
 
 由于我们很容易获取到t和t+1时刻的状态，只需要把这两个时刻的状态转换成$R_t$和$R_{t+1}$就行了（需要注意的是如果t时刻就是终止状态就没有t+1时刻，这时$R_t = r_t$）
 
