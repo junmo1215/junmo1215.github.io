@@ -111,3 +111,63 @@ sudo apt-get install htop
 htop
 ```
 
+# Python包安装
+
+## 常用
+
+下面这些是可以直接安装的，目前没有发现什么问题：
+- numpy
+- tensorflow/tensorflow_gpu
+- matplotlib
+
+``` sh
+pip install numpy
+```
+
+## scipy
+
+安装之前或之后需要安装pil或者pillow，否则无法使用imread
+
+``` sh
+pip install pillow
+pip install scipy
+```
+
+## gym
+
+``` sh
+sudo apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python-opengl libboost-all-dev libsdl2-dev swig
+
+pip install gym[all]
+```
+
+参考：
+- [cannot import name imread · Issue #1 · Newmu/stylize](https://github.com/Newmu/stylize/issues/1)
+- [openai/gym: A toolkit for developing and comparing reinforcement learning algorithms.](https://github.com/openai/gym#installing-everything)
+
+# screen使用
+
+新建并且指定screen名字：
+
+To create a new screen with the name foo, use
+
+``` sh
+screen -S foo
+```
+
+Then to reattach it, run
+
+``` sh
+screen -r foo  # or use -x, as in
+screen -x foo  # for "Multi display mode" (see the man page)
+```
+
+列出所有screen：
+
+``` sh
+screen -ls
+```
+
+参考：
+- [linux - How to assign name for a screen? - Stack Overflow](https://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+
