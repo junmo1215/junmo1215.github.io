@@ -141,9 +141,18 @@ sudo apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvf
 pip install gym[all]
 ```
 
+## opencv
+
+``` sh
+pip install opencv-python
+```
+
+> 还有一种安装方式是： <http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/> 似乎是编译源码的安装方式，不知道使用上有什么区别
+
 参考：
 - [cannot import name imread · Issue #1 · Newmu/stylize](https://github.com/Newmu/stylize/issues/1)
 - [openai/gym: A toolkit for developing and comparing reinforcement learning algorithms.](https://github.com/openai/gym#installing-everything)
+- [opencv-python 3.3.0.10 : Python Package Index](https://pypi.python.org/pypi/opencv-python)
 
 # screen使用
 
