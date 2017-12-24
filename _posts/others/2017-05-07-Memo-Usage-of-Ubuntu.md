@@ -77,6 +77,7 @@ sudo dpkg -i [名称].deb
 6. 调整输入法
 	- System Settings - Language Support - Keyboard input method system 改成fcitx
 7. 安装git，同步.gitconfig文件（C:\Users\MyLogin\.gitconfig -> ~/.gitconfig）
+8. 安装ssh server, screen
 
 # 查看以及杀掉进程
 
@@ -180,3 +181,33 @@ screen -ls
 参考：
 - [linux - How to assign name for a screen? - Stack Overflow](https://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
 
+# 安装 ssh server(OpenSSH Server)
+
+## 1. 安装
+
+``` sh
+sudo apt-get install openssh-server
+```
+
+## 2. 取消root登入权限
+
+``` sh
+sudo vi /etc/ssh/sshd_config
+```
+
+找到 PermitRootLogin 设定，改为 No
+
+> vi 指令:
+> - i (insert)  由游標之前加入資料。
+> - x  刪除游標所在該字元。
+> - X  刪除游標所在之前一字元。
+
+## 3. 重启ssh服务
+
+``` sh
+sudo /etc/init.d/ssh restart
+```
+
+参考：
+- [Ubuntu 安裝和啟用 SSH 登入 Read more: http://www.arthurtoday.com/2010/08/ubuntu-ssh.html#ixzz52BJpHvwh](http://www.arthurtoday.com/2010/08/ubuntu-ssh.html)
+- [vi指令說明(完整版)](http://www2.nsysu.edu.tw/csmlab/unix/vi_command.htm)
