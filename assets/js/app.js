@@ -20,6 +20,7 @@
     function activateTab() {
       if(['/tags.html', '/categories.html'].indexOf(window.location.pathname) > -1) {
         var hash = window.location.hash;
+        hash = decodeURIComponent(hash);
         if(hash)
           $('.tab-pane').length && $('a[href="' + hash + '"]').tab('show');
         else

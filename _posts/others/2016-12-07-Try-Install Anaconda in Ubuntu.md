@@ -87,6 +87,23 @@ ipython kernel install --user
 
 ![20161207_7]({{ site.url }}/images/20161207_7.png)
 
+# 建一个空的环境
+
+``` sh
+conda create --no-default-packages -n myenv python=3.5
+```
+
+# 删除环境
+
+``` sh
+conda remove --name myenv --all
+```
+
+or 
+
+``` sh
+conda env remove --name myenv
+```
 
 # 参考
 
