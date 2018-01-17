@@ -68,16 +68,16 @@ sudo dpkg -i [名称].deb
 > 这部分是个人习惯，仅作为备忘
 
 1. 修改快捷键
-	- 启动终端（系统设置 - 键盘 - 快捷键）
-	- 切换输入法（系统设置 - 文本输入）
+	- 启动终端（系统设置(System Settings) - 键盘(Keyboard) - 快捷键(Shortcuts)）
+	- 切换输入法（系统设置(System Settings) - 文本输入(Text Entry)）
 2. 修改电源选项（系统设置 - 电源）
-3. 修改窗口菜单栏位置（系统设置 - 外观 - 行为 - 显示窗口菜单）
-4. 开启工作区（系统设置 - 外观 - 行为 - 开启工作区）
-5. 修改终端复制粘贴快捷方式（终端菜单栏 - 编辑 - 首选项 - 快捷键）
+3. 修改窗口菜单栏位置（系统设置(System Settings) - 外观(Appearance) - 行为(Behavior) - 显示窗口菜单(Show the menus for a window)）
+4. 开启工作区（系统设置(System Settings) - 外观(Appearance) - 行为(Behavior) - 开启工作区(Enable workspaces)）
+5. 修改终端复制粘贴快捷方式（终端菜单栏 - 编辑(Edit) - 首选项(Preferences) - 快捷键(Shortcuts)）
 6. 调整输入法
 	- System Settings - Language Support - Keyboard input method system 改成fcitx
 7. 安装git，同步.gitconfig文件（C:\Users\MyLogin\.gitconfig -> ~/.gitconfig）
-8. 安装ssh server, screen
+8. 安装ssh server, screen, htop, terminator
 
 # 查看以及杀掉进程
 
@@ -208,6 +208,54 @@ sudo vi /etc/ssh/sshd_config
 sudo /etc/init.d/ssh restart
 ```
 
+## 4. 连接
+
+连接的时候会比较之前的key，如果重新安装了ssh的话会更改原有的key，导致连接的时候会提示：
+
+``` sh
+$ ssh username@*ip_address_or_hostname*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256: .....
+Please contact your system administrator.
+Add correct host key in .ssh/known_hosts to get rid of this message.
+Offending ECDSA key in .ssh/known_hosts:
+ECDSA host key for *ip_address_or_hostname* has changed and you have requested strict checking.
+Host key verification failed.
+```
+
+由于这边知道是因为重新安装导致可KEY更改，所以直接清除掉原有的key就行了
+
+``` sh
+ssh-keygen -R *ip_address_or_hostname*
+```
+
 参考：
 - [Ubuntu 安裝和啟用 SSH 登入 Read more: http://www.arthurtoday.com/2010/08/ubuntu-ssh.html#ixzz52BJpHvwh](http://www.arthurtoday.com/2010/08/ubuntu-ssh.html)
 - [vi指令說明(完整版)](http://www2.nsysu.edu.tw/csmlab/unix/vi_command.htm)
+- [verification - ssh remote host identification has changed - Stack Overflow](https://stackoverflow.com/questions/20840012/ssh-remote-host-identification-has-changed)
+
+# terminator使用
+
+安装：
+
+``` sh
+sudo apt-get install terminator
+```
+
+更换主题：
+
+将别人的配置文件替换自己的 ./config/terminator/config
+
+主题推荐：
+- https://github.com/fangwentong/dotfiles/blob/master/ubuntu-gui/terminator/config
+	> 需要安装Monaco字体 (http://blog.wentong.me/2014/05/add-fonts-to-your-linux/)
+
+参考：
+- [使用Terminator增强你的终端 | Wentong's Blog](http://blog.wentong.me/2014/05/work-with-terminator/)
+- [dotfiles/config at master · fangwentong/dotfiles](https://github.com/fangwentong/dotfiles/blob/master/ubuntu-gui/terminator/config)
