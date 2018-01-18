@@ -202,6 +202,14 @@ std::vector<weight> agent::weightsA;
         10946   0.4%    (0.4%)
 ```
 
+# 2584-fibonacci全部文章地址
+
+1. [[实作]TDLearning in 2584-fibonacci (一)、搭建基础框架](https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html)
+2. [[实作]TDLearning in 2584-fibonacci (二)、实现TD0](https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html)
+3. [[实作]TDLearning in 2584-fibonacci (三)、在2x3的盘面上完成expectimax search](https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html)
+4. [[实作]TDLearning in 2584-fibonacci (四)、expectimax search、TCL、bitboard](https://junmo1215.github.io/machine-learning/2018/01/11/practice-TDLearning-in-2584-fibonacci-4th.html)
+5. [[实作]TDLearning in 2584-fibonacci (五)、实作evil对抗自己的AI](https://junmo1215.github.io/machine-learning/2018/01/18/practice-TDLearning-in-2584-fibonacci-5th.html)
+
 # 参考
 
 1. [chessprogramming - General Setwise Operations](https://chessprogramming.wikispaces.com/General+Setwise+Operations)

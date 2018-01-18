@@ -16,8 +16,8 @@ description:
 涉及的知识点目前有：
 - 2584的基本规则
 - C++基本语法
-- Temporal Difference Learning
-- N-Tuple Networks
+- **Temporal Difference Learning**
+- **N-Tuple Networks**
 
 文章地址： <https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html>
 
@@ -88,7 +88,7 @@ slide up        reward: 2
 
 ## N-tuple
 
-跟2048不同的是，2584的最大可能性是第32个数，也就是每个格子都有32中可能，这样一来状态一共有 $ 32^16 $ 种，建立的Q表会特别大以至于存不下去，因此根据这篇paper：[Temporal difference learning of N-tuple networks for the game 2048](http://www.cs.put.poznan.pl/mszubert/pub/szubert2014cig.pdf) ，有人提出用盘面中的一些特征(feature)来代表当前状态，我们不直接在表中查出当前盘面多少分，而是查出每个特征多少分，再把这些特征加起来代表整个盘面的分数。在这个实作中特征的选择方法是根据盘面特定位置的方块来的，我们可以用一个一维数组表示盘面：
+跟2048不同的是，2584的最大可能性是第32个数，也就是每个格子都有32中可能，这样一来状态一共有 $32^{16}$ 种，建立的Q表会特别大以至于存不下去，因此根据这篇paper：[Temporal difference learning of N-tuple networks for the game 2048](http://www.cs.put.poznan.pl/mszubert/pub/szubert2014cig.pdf) ，有人提出用盘面中的一些特征(feature)来代表当前状态，我们不直接在表中查出当前盘面多少分，而是查出每个特征多少分，再把这些特征加起来代表整个盘面的分数。在这个实作中特征的选择方法是根据盘面特定位置的方块来的，我们可以用一个一维数组表示盘面：
 
 ```
  index (1-d form):
@@ -288,6 +288,14 @@ virtual void save_weights(const std::string& path) {
 ![20171127_2]({{ site.url }}/images/20171127_2.png)
 
 这好像是之前训练了两天的结果，不过不是用这台电脑训练的。从结果也能看出来，在17711前面的方块几乎能保证可以达到，但是17711后分数就一直上不去了，这是因为我们由于内存不够设置了MAX_INDEX = 21，对应的这个数值刚好就是17711，大于或者等于这个数值的方块我们的AI都没有区分，这大概也是这种方法的瓶颈。(其实感觉可以把weights这个变量存在数据库里面，不过每次跟数据库交互速度应该会比较慢，目前没有尝试这个，不过这类游戏研究的比较多的是2048，最大索引可以设置成16会方便很多)。
+
+# 2584-fibonacci全部文章地址
+
+1. [[实作]TDLearning in 2584-fibonacci (一)、搭建基础框架](https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html)
+2. [[实作]TDLearning in 2584-fibonacci (二)、实现TD0](https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html)
+3. [[实作]TDLearning in 2584-fibonacci (三)、在2x3的盘面上完成expectimax search](https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html)
+4. [[实作]TDLearning in 2584-fibonacci (四)、expectimax search、TCL、bitboard](https://junmo1215.github.io/machine-learning/2018/01/11/practice-TDLearning-in-2584-fibonacci-4th.html)
+5. [[实作]TDLearning in 2584-fibonacci (五)、实作evil对抗自己的AI](https://junmo1215.github.io/machine-learning/2018/01/18/practice-TDLearning-in-2584-fibonacci-5th.html)
 
 # 参考
 

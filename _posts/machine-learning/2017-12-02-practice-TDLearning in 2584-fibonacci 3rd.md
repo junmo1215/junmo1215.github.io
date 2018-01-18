@@ -18,7 +18,7 @@ description:
 - C++基本语法
 - Temporal Difference Learning
 - N-Tuple Networks
-- expectimax search
+- **expectimax search**
 
 文章地址： <https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html>
 
@@ -131,7 +131,7 @@ float get_after_expect(board2x3 board){
         return after_expects[index];
 
     float temp_expects[2] = {0, 0};
-    // 游戏可能防止值为1或者2的方块
+    // 游戏可能放置值为1或者2的方块
     for(int i: {1, 2}){
         float expect = 0;
         int count = 0;
@@ -225,6 +225,14 @@ a 2 2 2 2 2 2
 > 由于float精度的问题，这个实作中误差在小数点后三位都是可以接受的，但是超过这个范围就一定是代码有问题了。
 
 测试代码也是只有Ubuntu系统能跑，具体用法参照这个文件： \test\pr-3\instruction.txt
+
+# 2584-fibonacci全部文章地址
+
+1. [[实作]TDLearning in 2584-fibonacci (一)、搭建基础框架](https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html)
+2. [[实作]TDLearning in 2584-fibonacci (二)、实现TD0](https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html)
+3. [[实作]TDLearning in 2584-fibonacci (三)、在2x3的盘面上完成expectimax search](https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html)
+4. [[实作]TDLearning in 2584-fibonacci (四)、expectimax search、TCL、bitboard](https://junmo1215.github.io/machine-learning/2018/01/11/practice-TDLearning-in-2584-fibonacci-4th.html)
+5. [[实作]TDLearning in 2584-fibonacci (五)、实作evil对抗自己的AI](https://junmo1215.github.io/machine-learning/2018/01/18/practice-TDLearning-in-2584-fibonacci-5th.html)
 
 # 参考
 

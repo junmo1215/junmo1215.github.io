@@ -483,6 +483,14 @@ void train_weights(const board& b, const board& next_b, const int reward){
 
 不过如果使用TCL的话内存的使用量是TDL的三倍，虽然训练速度会快一点，结果会好一点，但是由于内存限制需要把MAX_INDEX改小，这会导致结果变差，综合考虑有点不确定最好的结果是怎么样的，最后写完了之后也没有电脑跑结果就一直没有测试最终的分数。
 
+# 2584-fibonacci全部文章地址
+
+1. [[实作]TDLearning in 2584-fibonacci (一)、搭建基础框架](https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html)
+2. [[实作]TDLearning in 2584-fibonacci (二)、实现TD0](https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html)
+3. [[实作]TDLearning in 2584-fibonacci (三)、在2x3的盘面上完成expectimax search](https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html)
+4. [[实作]TDLearning in 2584-fibonacci (四)、expectimax search、TCL、bitboard](https://junmo1215.github.io/machine-learning/2018/01/11/practice-TDLearning-in-2584-fibonacci-4th.html)
+5. [[实作]TDLearning in 2584-fibonacci (五)、实作evil对抗自己的AI](https://junmo1215.github.io/machine-learning/2018/01/18/practice-TDLearning-in-2584-fibonacci-5th.html)
+
 # 参考
 
 1. [chessprogramming - General Setwise Operations](https://chessprogramming.wikispaces.com/General+Setwise+Operations)

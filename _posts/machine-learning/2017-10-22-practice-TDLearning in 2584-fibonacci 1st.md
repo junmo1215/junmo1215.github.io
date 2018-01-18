@@ -18,8 +18,8 @@ description:
 这个代码是[吳毅成教授](http://java.csie.nctu.edu.tw/~icwu/chindex.html)开设的TCG（电脑对局理论，Theory of Computer Games）课程project，从0开始（助教这次提供了框架）一步步实现AI自己玩2584，最终的胜率（达到2584）差不多在95%以上。
 
 涉及的知识点目前有：
-- 2584的基本规则
-- C++基本语法
+- **2584的基本规则**
+- **C++基本语法**
 
 文章地址： <https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html>
 
@@ -352,7 +352,7 @@ void show() const {
 }
 ```
 
-其中POSSIBLE_INDEX是2584游戏中可能达到的最大索引，2048的最大索引就是16（理论上应该是17）,但是2584会远远比这个大，具体是多少没有算，应该在24左右，这边预留的是32。
+其中POSSIBLE_INDEX是2584游戏中可能达到的最大索引，2048的最大索引就是16（理论上应该是17）,但是2584会远远比这个大，按照目前的规则，最大可以达到32。
 
 > 关于2048的索引最大值，模板代码中采用的方式是1作为第一个索引，对应的值是2（可以参照模板中evil的take_action，以及原本statistic中的show函数），理论上2048出现的最大方块的值是131072，对应的索引应该是17,但是由于这个值一旦出现游戏就结束（因为格子必然已经塞满了）并且出现的概率特别特别低，所以为了节省空间就不考虑这个出现的情况了。
 
@@ -381,8 +381,8 @@ clean:
 > - total: 最多进行的游戏局数
 > - block: 每多少局输出统计信息
 > - limit: 最多保存多少局的详细信息
-> - load: 读取统计信息和weights的位置
-> - save: 保存统计信息和weights的位置
+> - load: 读取统计信息
+> - save: 保存统计信息
 > - summary: 结束时是否输出统计信息
 
 查看测试程序和速度(似乎只有ubuntu系统能跑)：
@@ -394,6 +394,14 @@ clean:
 ./test/2584-judge --load=stat.bin --check --check
 ./test/2584-speed
 ```
+
+# 2584-fibonacci全部文章地址
+
+1. [[实作]TDLearning in 2584-fibonacci (一)、搭建基础框架](https://junmo1215.github.io/machine-learning/2017/10/22/practice-TDLearning-in-2584-fibonacci-1st.html)
+2. [[实作]TDLearning in 2584-fibonacci (二)、实现TD0](https://junmo1215.github.io/machine-learning/2017/11/27/practice-TDLearning-in-2584-fibonacci-2nd.html)
+3. [[实作]TDLearning in 2584-fibonacci (三)、在2x3的盘面上完成expectimax search](https://junmo1215.github.io/machine-learning/2017/12/02/practice-TDLearning-in-2584-fibonacci-3rd.html)
+4. [[实作]TDLearning in 2584-fibonacci (四)、expectimax search、TCL、bitboard](https://junmo1215.github.io/machine-learning/2018/01/11/practice-TDLearning-in-2584-fibonacci-4th.html)
+5. [[实作]TDLearning in 2584-fibonacci (五)、实作evil对抗自己的AI](https://junmo1215.github.io/machine-learning/2018/01/18/practice-TDLearning-in-2584-fibonacci-5th.html)
 
 # 参考
 
