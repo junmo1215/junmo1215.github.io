@@ -259,3 +259,31 @@ sudo apt-get install terminator
 参考：
 - [使用Terminator增强你的终端 | Wentong's Blog](http://blog.wentong.me/2014/05/work-with-terminator/)
 - [dotfiles/config at master · fangwentong/dotfiles](https://github.com/fangwentong/dotfiles/blob/master/ubuntu-gui/terminator/config)
+
+# 安装python3.6
+
+Ubuntu 16.04 默认安装的是2.7和3.5版本的python
+
+如果需要再加上一个3.6版本的python，可以单独安装：
+
+``` sh
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update
+sudo apt-get install python3.6
+```
+
+这时候电脑就有三个版本的Python了
+
+``` sh
+$ python -V
+Python 2.7.12
+$ python3 -V
+Python 3.5.2
+$ python3.6 -V
+Python 3.6.3
+```
+
+参考：
+
+- [16.04 - How do I install Python 3.6 using apt-get? - Ask Ubuntu](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get/865569#865569)
+- [virtualenv - How to install Python 3.6 in virtual environment? - Ask Ubuntu](https://askubuntu.com/questions/881042/how-to-install-python-3-6-in-virtual-environment)
