@@ -142,6 +142,18 @@ sudo apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvf
 pip install gym[all]
 ```
 
+如果出现mujoco-py相关的安装错误，先试试 ```pip install -U 'mujoco-py<1.50.2,>=1.50.1'```
+
+如果仍然不成功，再尝试源码安装：
+
+``` sh
+git clone https://github.com/openai/mujoco-py  
+cd mujoco-py  
+pip install -e . --no-cache  
+```
+
+接下来再安装openAI gym应该就没有问题了
+
 ## opencv
 
 ``` sh
