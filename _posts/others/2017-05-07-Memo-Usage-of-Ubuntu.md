@@ -269,7 +269,7 @@ sudo apt-get install terminator
 	> 需要安装Monaco字体 (http://blog.wentong.me/2014/05/add-fonts-to-your-linux/)
 
 参考：
-- [使用Terminator增强你的终端 | Wentong's Blog](http://blog.wentong.me/2014/05/work-with-terminator/)
+- [使用Terminator增强你的终端 Wentong's Blog](http://blog.wentong.me/2014/05/work-with-terminator/)
 - [dotfiles/config at master · fangwentong/dotfiles](https://github.com/fangwentong/dotfiles/blob/master/ubuntu-gui/terminator/config)
 
 # 安装python3.6
