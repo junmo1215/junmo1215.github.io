@@ -247,6 +247,15 @@ Host key verification failed.
 ssh-keygen -R *ip_address_or_hostname*
 ```
 
+windows的清除方法是直接修改文件
+
+``` sh
+# %USERPROFILE% 指的是用户主目录，就是存放下载、文档那些目录的地方
+cd /d "%USERPROFILE%"
+cd .ssh\ # or cd ssh\
+vim known_hosts
+```
+
 参考：
 - [Ubuntu 安裝和啟用 SSH 登入 Read more: http://www.arthurtoday.com/2010/08/ubuntu-ssh.html#ixzz52BJpHvwh](http://www.arthurtoday.com/2010/08/ubuntu-ssh.html)
 - [vi指令說明(完整版)](http://www2.nsysu.edu.tw/csmlab/unix/vi_command.htm)
