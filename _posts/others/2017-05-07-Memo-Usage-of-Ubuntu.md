@@ -308,3 +308,61 @@ Python 3.6.3
 
 - [16.04 - How do I install Python 3.6 using apt-get? - Ask Ubuntu](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get/865569#865569)
 - [virtualenv - How to install Python 3.6 in virtual environment? - Ask Ubuntu](https://askubuntu.com/questions/881042/how-to-install-python-3-6-in-virtual-environment)
+
+# 安装Samba
+
+Ubuntu安装Samba server，Windows使用共享文件夹的方法
+
+## 1. 安装：
+
+``` sh
+sudo apt update
+sudo apt install samba
+```
+
+## 2. 配置：
+
+编辑配置文件`/etc/samba/smb.conf`
+
+```
+# 参考配置
+[home]
+comment = home
+path = /home/junmo
+read only = no
+browseable = yes
+```
+
+> [home] : 可以理解成配置的名字，之后会通过这个名字访问到path中配置的文件夹  
+> path: 文件夹路径
+
+## 3. 新建用户(后面会使用这个用户访问指定的文件夹)
+
+``` sh
+# 如果配置的用户不是Ubuntu用户，可能需要将共享目录的权限改为777
+# sudo chmod 777 /home/junmo
+sudo smbpasswd -a username
+```
+
+## 4. 然后启动smb server
+
+``` sh
+sudo service smbd restart
+```
+
+windows电脑添加网络路径：
+
+文件管理器中新增网络位置，URL填写`\\{ip}\{name}`
+
+![20170507_6]({{ site.url }}/images/20170507_6.png)
+
+> Win10如果连不上的话可以尝试这个解决方案（不确定什么原因）
+> 1. 以管理员权限打开Windows的PowerShell
+> 2. 执行`sc.exe config lanmanworkstation depend= bowser/mrxsmb10/nsi`和`sc.exe config mrxsmb20 start= disabled`然后重启电脑
+
+参考：
+
+- [Install and Configure Samba Ubuntu tutorials](https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0)
+- [Cannot connect to Linux Samba share from Windows 10 - Server Fault](https://serverfault.com/questions/720332/cannot-connect-to-linux-samba-share-from-windows-10)
+- [Not discovering Ubuntu server on network](https://social.technet.microsoft.com/Forums/en-US/26e5fd75-f3ab-4ffe-ace4-ed4ba96f82e5/not-discovering-ubuntu-server-on-network?forum=win10itpronetworking)
+- [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows and Windows Server](https://support.microsoft.com/en-us/help/2696547/detect-enable-disable-smbv1-smbv2-smbv3-in-windows-and-windows-server)
