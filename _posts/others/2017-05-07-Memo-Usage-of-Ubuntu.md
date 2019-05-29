@@ -76,8 +76,9 @@ sudo dpkg -i [名称].deb
 5. 修改终端复制粘贴快捷方式（终端菜单栏 - 编辑(Edit) - 首选项(Preferences) - 快捷键(Shortcuts)）
 6. 调整输入法
 	- System Settings - Language Support - Keyboard input method system 改成fcitx
+	- Text Entry中增加input source(Pinyin)
 7. 安装git，同步.gitconfig文件（C:\Users\MyLogin\.gitconfig -> ~/.gitconfig）
-8. 安装ssh server, screen, htop, terminator
+8. 安装ssh server, screen, htop, terminator, vscode
 
 # 查看以及杀掉进程
 
@@ -271,7 +272,7 @@ sudo apt-get install terminator
 
 更换主题：
 
-将别人的配置文件替换自己的 ./config/terminator/config
+将别人的配置文件替换自己的 ~/.config/terminator/config
 
 主题推荐：
 - https://github.com/fangwentong/dotfiles/blob/master/ubuntu-gui/terminator/config
