@@ -191,8 +191,18 @@ screen -x foo  # for "Multi display mode" (see the man page)
 screen -ls
 ```
 
+配置screen允许滚动：
+编辑~/.screenrc增加下面两句话
+```
+termcapinfo xterm* ti@:te@
+termcapinfo xterm|xterms|xs|rxvt 'hs:ts=\E]2;:fs=07:ds=\E]2;screen07'
+```
+
 参考：
 - [linux - How to assign name for a screen? - Stack Overflow](https://stackoverflow.com/questions/3202111/how-to-assign-name-for-a-screen)
+- [使screen支持滚动 - Beauty of Life, Beauty of CS](http://rex-shen.net/%E4%BD%BFscreen%E6%94%AF%E6%8C%81%E6%BB%9A%E5%8A%A8/)
+- [scrolling - Is there a way to make Screen scroll like a normal terminal? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/43229/is-there-a-way-to-make-screen-scroll-like-a-normal-terminal)
+- [How to scroll in GNU Screen - SaltyCrane Blog](https://www.saltycrane.com/blog/2008/01/how-to-scroll-in-gnu-screen/)
 
 # 安装 ssh server(OpenSSH Server)
 
