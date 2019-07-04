@@ -79,6 +79,7 @@ sudo dpkg -i [名称].deb
 	- Text Entry中增加input source(Pinyin)
 7. 安装git，同步.gitconfig文件（C:\Users\MyLogin\.gitconfig -> ~/.gitconfig）
 8. 安装ssh server, screen, htop, terminator, vscode
+9. 设置默认编辑器为vim`echo export EDITOR=/usr/bin/vim >> ~/.bashrc `
 
 # 查看以及杀掉进程
 
