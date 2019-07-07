@@ -362,6 +362,9 @@ sudo smbpasswd -a username
 sudo service smbd restart
 ```
 
+> 如果是centos系统，可能需要配置防火墙放行规则以及SeLinux
+> setenforce 0
+
 windows电脑添加网络路径：
 
 文件管理器中新增网络位置，URL填写`\\{ip}\{name}`
@@ -378,3 +381,4 @@ windows电脑添加网络路径：
 - [Cannot connect to Linux Samba share from Windows 10 - Server Fault](https://serverfault.com/questions/720332/cannot-connect-to-linux-samba-share-from-windows-10)
 - [Not discovering Ubuntu server on network](https://social.technet.microsoft.com/Forums/en-US/26e5fd75-f3ab-4ffe-ace4-ed4ba96f82e5/not-discovering-ubuntu-server-on-network?forum=win10itpronetworking)
 - [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows and Windows Server](https://support.microsoft.com/en-us/help/2696547/detect-enable-disable-smbv1-smbv2-smbv3-in-windows-and-windows-server)
+- [CentOS 7下Samba服务器的安装与配置 - Muscleape - 博客园](https://www.cnblogs.com/muscleape/p/6385583.html)
