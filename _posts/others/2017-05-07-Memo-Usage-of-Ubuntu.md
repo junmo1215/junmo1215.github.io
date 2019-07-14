@@ -362,8 +362,8 @@ sudo smbpasswd -a username
 sudo service smbd restart
 ```
 
-> 如果是centos系统，可能需要配置防火墙放行规则以及SeLinux
-> setenforce 0
+> 如果是centos系统，可能需要配置防火墙放行规则以及SeLinux  
+> `setenforce 0`
 
 windows电脑添加网络路径：
 
