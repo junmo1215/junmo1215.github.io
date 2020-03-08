@@ -382,3 +382,27 @@ windows电脑添加网络路径：
 - [Not discovering Ubuntu server on network](https://social.technet.microsoft.com/Forums/en-US/26e5fd75-f3ab-4ffe-ace4-ed4ba96f82e5/not-discovering-ubuntu-server-on-network?forum=win10itpronetworking)
 - [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows and Windows Server](https://support.microsoft.com/en-us/help/2696547/detect-enable-disable-smbv1-smbv2-smbv3-in-windows-and-windows-server)
 - [CentOS 7下Samba服务器的安装与配置 - Muscleape - 博客园](https://www.cnblogs.com/muscleape/p/6385583.html)
+
+# 控制台通过代理使用wget和curl
+
+``` sh
+export http_proxy=http://proxyAddress:port
+export https_proxy=http://proxyAddress:port
+```
+
+> 在网上看到了socks5代理的写法，但是测试好像不成功就没有继续纠结了
+
+如果在使用`sudo + 命令`的时候也需要使用代理，可以修改`/etc/sudoers`文件实现
+
+在Defaults env_reset后面加上
+
+``` sh
+Defaults env_keep = "http_proxy https_proxy ftp_proxy DISPLAY XAUTHORITY"
+# 也可以只加上
+# Defaults env_keep = "http_proxy https_proxy
+```
+
+参考
+
+- [让终端走代理的几种方法 fazero](https://blog.fazero.me/2015/09/15/%E8%AE%A9%E7%BB%88%E7%AB%AF%E8%B5%B0%E4%BB%A3%E7%90%86%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/)
+- [networking - How to run "sudo apt-get update" through proxy in commandline? - Ask Ubuntu](https://askubuntu.com/questions/7470/how-to-run-sudo-apt-get-update-through-proxy-in-commandline)
