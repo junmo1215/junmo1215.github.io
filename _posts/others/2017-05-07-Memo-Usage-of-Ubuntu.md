@@ -406,3 +406,25 @@ Defaults env_keep = "http_proxy https_proxy ftp_proxy DISPLAY XAUTHORITY"
 
 - [让终端走代理的几种方法 fazero](https://blog.fazero.me/2015/09/15/%E8%AE%A9%E7%BB%88%E7%AB%AF%E8%B5%B0%E4%BB%A3%E7%90%86%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/)
 - [networking - How to run "sudo apt-get update" through proxy in commandline? - Ask Ubuntu](https://askubuntu.com/questions/7470/how-to-run-sudo-apt-get-update-through-proxy-in-commandline)
+
+# Docker使用
+
+docker加入用户组（避免每次docker之前要加上sudo）  
+（当前账户重新登录生效）
+
+``` sh
+sudo usermod -aG docker $USER
+```
+
+重启docker
+
+```
+sudo service docker restart
+```
+
+使用portainer
+
+```
+docker volume create portainer_data
+docker run -d -p 7001:8000 -p 8001:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+```
