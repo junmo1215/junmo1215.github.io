@@ -8,6 +8,7 @@ markdown: kramdown
 disqus: 
 google_analytics: UA-109837425-1
 title: junmo
+future: true
 
 defaults:
   -
